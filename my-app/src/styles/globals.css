@@ -44,6 +44,12 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --pallet-one: #44281d;
+  --pallet-two: #e4a788;
+  --pallet-tree: #f0e14a;
+  --pallet-for: #97ce4c;
+  --pallet-five: #e89ac7;
 }
 
 @media (prefers-color-scheme: dark) {

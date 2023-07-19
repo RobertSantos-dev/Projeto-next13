@@ -12,8 +12,17 @@
 }
 
 .item {
-  flex-grow: 1;
+  border: 1px solid;
+  flex: 1 1 200px;
   padding: 5px;
+  position: relative;
+}
+
+.item figcaption {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 .main, .itens, .item {

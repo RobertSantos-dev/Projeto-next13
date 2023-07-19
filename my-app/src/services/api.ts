@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {ComponentState} from 'react';
 
 const api = axios.create({
   baseURL: 'https://rickandmortyapi.com/api',
@@ -18,10 +17,10 @@ const api = axios.create({
 //   }
 // );
 
-const listAll = async (setData: ComponentState) => {
+const listAll = async () => {
   const { data } = await api.get('/character');
 
-  setData(data.results);
-};
+  return data;
+}
 
 export { listAll };

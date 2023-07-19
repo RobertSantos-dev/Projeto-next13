@@ -1,0 +1,26 @@
+.main {
+  justify-content: space-between;
+  padding: 5px;
+  min-height: 100vh;
+}
+
+.itens {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  width: 93%;
+}
+
+.item {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.main, .itens, .item {
+  display: flex;
+  align-items: center;
+}
+
+.main, .item {
+  flex-direction: column;
+}

@@ -50,6 +50,7 @@
   --pallet-tree: #f0e14a;
   --pallet-for: #97ce4c;
   --pallet-five: #e89ac7;
+  --pallet-six: #282a36;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -99,12 +100,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--pallet-six);
 }
 
 a {

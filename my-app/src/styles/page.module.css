@@ -7,20 +7,24 @@
 .itens {
   flex-wrap: wrap;
   justify-content: center;
-  gap: 7px;
+  gap: 9px;
   width: 93%;
 }
 
 .item {
-  border: 1px solid;
-  flex: 1 1 200px;
+  box-shadow: 0 0 5px black, inset 0 0 2px black;
+  border-radius: 10px;
+  flex: 1 1 160px;
+  height: 170px;
   padding: 5px;
-  position: relative;
+}
+
+.item img {
+  border-radius: 100px;
 }
 
 .item figcaption {
-  bottom: 0;
-  position: absolute;
+  color: var(--pallet-five);
   text-align: center;
   width: 100%;
 }

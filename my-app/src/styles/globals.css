@@ -45,12 +45,12 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
-  --pallet-one: #44281d;
-  --pallet-two: #e4a788;
-  --pallet-tree: #f0e14a;
-  --pallet-for: #97ce4c;
+  --pallet-one: #282A36;
+  --pallet-two: #191622;
+  --pallet-tree: #FF79C6;
+  /* --pallet-for: #97ce4c;
   --pallet-five: #e89ac7;
-  --pallet-six: #282a36;
+  --pallet-six: #282a36; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -100,7 +100,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: var(--pallet-six);
+  background: var(--pallet-one);
 }
 
 a {

@@ -20,21 +20,25 @@ export default async function Home() {
           icon={ <MdGroups /> }
           name='Personagens'
           style={ styles.m1 }
+          path='/characters'
         />
         <Menu
           icon={ <FaMapMarkedAlt/> }
           name='Localizações'
           style={ styles.m2 }
+          path='/locations'
         />
         <Menu
           icon={ <AiFillInfoCircle /> }
           name='Informações'
           style={ styles.m3 }
+          path='/info'
         />
         <Menu
           icon={ <AiFillStar /> }
           name='Favoritos'
           style={ styles.m4 }
+          path='/favorites'
         />
       </section>
       {/* <Itens data={ list.results } /> */}

@@ -1,0 +1,38 @@
+.header_characters {
+  min-width: 100%;
+  height: 100%;
+}
+
+.logo_characters {
+  color: white;
+  margin-bottom: 10px;
+  padding-left: 10%;
+}
+
+.poster_characters {
+  background-image: url('../../../public/background_project_2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 381px;
+  margin: auto;
+  width: 90%;
+}
+
+.poster_characters p {
+  align-items: center;
+  background-color: #0000006c;
+  color: var(--pallet-for);
+  display: flex;
+  font-size: 85px;
+  font-weight: 800;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+.poster_characters, .poster_characters p {
+  border-radius: 10px;
+}

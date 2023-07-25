@@ -49,8 +49,9 @@
   --pallet-two: #191622;
   --pallet-tree: #FF79C6;
   --pallet-for: #FCFCFF;
-  /* --pallet-five: #e89ac7;
-  --pallet-six: #282a36; */
+  --pallet-five: #E1E1E6;
+  --pallet-six: #41414D;
+  --pallet-seven: #78D1E1;
 }
 
 @media (prefers-color-scheme: dark) {

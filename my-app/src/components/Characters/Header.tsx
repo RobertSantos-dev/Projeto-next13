@@ -1,5 +1,6 @@
-import { Fredoka } from 'next/font/google'
+import { Fredoka } from "next/font/google";
 import style from "../../styles/characters/page.module.css";
+import { AiFillInfoCircle } from "react-icons/ai";
 
 const fredoka = Fredoka({ subsets: ['hebrew'] });
 
@@ -11,6 +12,10 @@ export default function Header() {
       </div>
       <div className={ style.poster_characters }>
         <p className={ fredoka.className }>The Rick and Morty</p>
+      </div>
+      <div>
+        <AiFillInfoCircle />
+        <span>Personagens</span>
       </div>
     </header>
   );

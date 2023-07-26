@@ -1,10 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { DM_Sans, Roboto } from "next/font/google";
 import Image from "next/image";
 
 import { listAll } from "@/services/api";
 import style from "../../styles/characters/page.module.css";
+
+const dmSantsOne = DM_Sans({ subsets: ["latin"], weight: "500" });
+const dmSantsTwo = DM_Sans({ subsets: ["latin"], weight: "700" });
+const roboto = Roboto({ subsets: ["latin"], weight: "400" });
+
 
 export default function Interactions() {
   const [search, setSearch] = useState('');
@@ -34,32 +40,34 @@ export default function Interactions() {
               <Image
                 src={ e.image }
                 alt={ e.name }
-                width={ 85 }
-                height={ 85 }
+                width={ 90 }
+                height={ 90 }
               />
-              <div className={ style.div_info }>
-                <p className={ style.name }>{ e.name }</p>
+              <div className={ `${style.div_info} ${dmSantsOne.className}` }>
+                <p className={ `${style.name} ${dmSantsTwo.className}` }>{ e.name }</p>
                 <p>
-                  <span className={style.s1}>Status</span>
-                  <span className={style.s2}>:</span>
+                  <span className={`${style.s1} ${roboto.className}`}>Status</span>
+                  <span className={`${style.s2} ${roboto.className}`}>:</span>
                   {' '}
                   { e.status == 'unknown' ? 'Desconhecido' : e.status }
                 </p>
                 <p>
-                  <span className={style.s1}>Tipo</span>
-                  <span className={style.s2}>:</span>
+                  <span className={ `${style.s1} ${roboto.className}` }>Tipo</span>
+                  <span className={ `${style.s2} ${roboto.className}` }>:</span>
                   {' '}
                   { e.type || '?' }
                 </p>
                 <p>
-                  <span className={style.s1}>Espécie</span>
-                  <span className={style.s2}>:</span>
+                  <span className={`${style.s1} ${roboto.className}`}>Espécie</span>
+                  <span className={`${style.s2} ${roboto.className}`}>:</span>
                   {' '}
                   { e.species }
                 </p>
               </div>
               <div className={ style.div_button }>
-                <button type="button">Mais detalhes</button>
+                <button type="button" className={ dmSantsTwo.className }>
+                  Mais detalhes
+                </button>
               </div>
             </li>
           )) }

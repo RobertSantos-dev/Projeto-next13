@@ -24,4 +24,10 @@ const listAll = async (setList: ComponentState) => {
   setList(data.results);
 }
 
+const listId = async (setId: ComponentState, id: string) => {
+  const { data } = await api.get(`/character/${id}`);
+
+  setId(data);
+}
+
 export { listAll };

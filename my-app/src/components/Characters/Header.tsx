@@ -14,7 +14,7 @@ export default function Header() {
           <h1>LOGO</h1>
         </div>
         <div className={ style.link_characters }>
-          <AiFillInfoCircle />
+          {/* <AiFillInfoCircle /> */}
           <span className={ nunito.className }>Personagens</span>
         </div>
       </div>

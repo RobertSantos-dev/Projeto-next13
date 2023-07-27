@@ -1,5 +1,3 @@
-// import { listAll } from '@/services/api';
-// import Itens from '@/components/Home/Itens';
 import Menu from "@/components/Home/Menu";
 import Logo from "@/components/global/Logo";
 
@@ -10,7 +8,6 @@ import { AiFillInfoCircle, AiFillStar } from "react-icons/ai";
 import styles from '../styles/page.module.css';
 
 export default async function Home() {
-  // const list = await listAll();
 
   return (
     <main className={ styles.main }>
@@ -41,7 +38,6 @@ export default async function Home() {
           path='/favorites'
         />
       </section>
-      {/* <Itens data={ list.results } /> */}
     </main>
   )
 }

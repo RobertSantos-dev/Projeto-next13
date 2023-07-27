@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { DM_Sans, Roboto } from "next/font/google";
 import Image from "next/image";
 
@@ -15,6 +16,8 @@ const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 export default function Interactions() {
   const [search, setSearch] = useState('');
   const [list, setList] = useState([]);
+
+  const { push } = useRouter();
 
   useEffect(() => { listAll(setList); }, []);
 
@@ -65,7 +68,11 @@ export default function Interactions() {
                 </p>
               </div>
               <div className={ style.div_button }>
-                <button type="button" className={ dmSantsTwo.className }>
+                <button
+                  type="button"
+                  className={ dmSantsTwo.className }
+                  onClick={ () => { push(`/characters/${e.id}`) } }
+                >
                   Mais detalhes
                 </button>
               </div>

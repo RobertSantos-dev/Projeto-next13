@@ -1,0 +1,35 @@
+.header_global {
+  height: 40px;
+  justify-content: space-between;
+  width: 90%;
+}
+
+
+.div_route {
+  padding-left: 20px;
+}
+.div_route a {
+  color: var(--pallet-tree);
+  font-size: 25px;
+}
+.div_route a:hover {
+  filter: drop-shadow(0 0 10px black);
+}
+
+.div_logo {}
+.div_logo span {
+  color: var(--pallet-for);
+  font-weight: bold;
+}
+
+
+/* ---  --- */
+.header_global, .div_route, .div_logo {
+  align-items: center;
+  display: flex;
+}
+
+.div_route, .div_logo {
+  flex-grow: 1;
+  height: 100%;
+}

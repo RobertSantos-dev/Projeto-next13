@@ -26,7 +26,7 @@ export default function Interactions() {
   );
 
   return (
-    <section className="">
+    <section className={ style.section_interactions }>
       <div className={ style.div_input }>
         <input
           type="text"

@@ -1,7 +1,14 @@
+import HeaderGlobal from "@/components/global/Header";
+import Card from "@/components/characterId/Card";
+
 interface Props { params: { id: string } }
 
 export default function Characters({ params }: Props) {
   return (
-    <p>{ params.id }</p>
+    <>
+      <HeaderGlobal />
+      <Card />
+      <p>{ params.id }</p>
+    </>
   );
 }

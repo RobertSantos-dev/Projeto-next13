@@ -77,6 +77,10 @@
 
 /* --- componente Interactions --- */
 
+.section_interactions {
+  margin-bottom: 30px;
+}
+
 .div_input {
   margin-bottom: 20px;
 }

@@ -52,6 +52,7 @@
   --pallet-five: #E1E1E6;
   --pallet-six: #41414D;
   --pallet-seven: #78D1E1;
+  --pallet-eight: #E96379;
 }
 
 @media (prefers-color-scheme: dark) {

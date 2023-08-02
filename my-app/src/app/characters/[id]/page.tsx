@@ -8,7 +8,6 @@ export default function Characters({ params }: Props) {
     <>
       <HeaderGlobal />
       <Card />
-      <p>{ params.id }</p>
     </>
   );
 }

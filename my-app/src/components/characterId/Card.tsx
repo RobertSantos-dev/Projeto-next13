@@ -1,4 +1,5 @@
 import DetailsOne from "./DetailsOne";
+import DetailsTwo from "./DetailsTwo";
 import style from "../../styles/characterId/page.module.css";
 
 export default function Card() {
@@ -9,6 +10,7 @@ export default function Card() {
       </header>
       <section className={ style.section_card }>
         <DetailsOne />
+        <DetailsTwo />
       </section>
     </main>
   )

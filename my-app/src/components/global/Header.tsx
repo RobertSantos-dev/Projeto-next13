@@ -20,6 +20,7 @@ export default function HeaderGlobal() {
           LOGO
         </span>
       </div>
+      <div></div>
     </header>
   );
 }

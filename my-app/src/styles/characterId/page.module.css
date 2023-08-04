@@ -1,4 +1,5 @@
 .main_card {
+  padding: 5px;
   margin-top: 30px;
 }
 
@@ -22,11 +23,9 @@
 
 
 .div_icons {
-  align-items: center;
-  display: flex;
   height: 60px;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 15px;
   width: 90%;
 }
 
@@ -43,7 +42,7 @@
   border: none;
   color: var(--pallet-eight);
   cursor: pointer;
-  font-size: 45px;
+  font-size: 40px;
 }
 .div_icons button:hover {
   filter: drop-shadow(0 0 5px var(--pallet-eight));
@@ -53,16 +52,75 @@
   color: var(--pallet-eight);
 }
 
+
+.div_info {
+  justify-content: center;
+  transform: translateY(-30px);
+}
+
+.div_info_one {
+  margin-bottom: 35px;
+}
+.div_info_one img {
+  border-radius: 100%;
+  margin-bottom: 15px;
+}
+.div_info_one h3 {
+  color: var(--pallet-five);
+}
+
+.div_info_two {
+  gap: 7px;
+  padding: 5px;
+  width: 70%;
+}
+.div_info_two p {
+  color: var(--pallet-for);
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+
 /* --- --- */
 
 .main_card, .header_card, .div_details_one {
   width: 100%;
 }
 
+
 .section_card, .div_icons {
   margin: auto;
 }
 
+
 .div_icons a, .div_icons span {
-  font-size: 35px;
+  font-size: 30px;
+}
+
+.div_icons a, .div_icons button {
+  height: 45px;
+  width: 45px;
+  position: relative;
+}
+.div_icons a svg, .div_icons button svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.div_icons, .div_info, .div_info_one, .div_info_two p {
+  align-items: center;
+  display: flex;
+}
+
+
+.div_info, .div_info_one {
+  flex-direction: column;
+}
+
+
+.div_info_one span, .div_info_two p span {
+  color: var(--pallet-seven);
 }

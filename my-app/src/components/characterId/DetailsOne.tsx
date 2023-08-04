@@ -36,7 +36,10 @@ export default function DetailsOne() {
         { loading
           ? <span><AiOutlineLoading3Quarters /></span>
           : (
-            <button onClick={ () => { btnFavorite({ setFavorite, setLoading }) } }>
+            <button
+              type="button"
+              onClick={ () => { btnFavorite({ setFavorite, setLoading }) } }
+            >
               { !favorite ? <MdFavoriteBorder /> : <MdFavorite /> }
             </button>
           )

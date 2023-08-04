@@ -1,13 +1,13 @@
 .header_global {
   height: 40px;
   justify-content: space-between;
-  width: 90%;
+  width: 97%;
 }
 
 
-.div_route {
+/* .div_route {
   padding-left: 20px;
-}
+} */
 .div_route a {
   color: var(--pallet-tree);
   font-size: 25px;
@@ -16,7 +16,6 @@
   filter: drop-shadow(0 0 10px black);
 }
 
-.div_logo {}
 .div_logo span {
   color: var(--pallet-for);
   font-weight: bold;
@@ -30,6 +29,5 @@
 }
 
 .div_route, .div_logo {
-  flex-grow: 1;
   height: 100%;
 }

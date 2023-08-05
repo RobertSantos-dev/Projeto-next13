@@ -1,5 +1,5 @@
-import Header from "@/components/Characters/Header";
-import Interactions from "@/components/Characters/Interacions";
+import Header from "@/components/characters/Header";
+import Interactions from "@/components/characters/Interacions";
 
 export default function Characters() {
   return (

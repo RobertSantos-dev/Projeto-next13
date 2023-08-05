@@ -1,4 +1,4 @@
-import Menu from "@/components/Home/Menu";
+import Menu from "@/components/home/Menu";
 import Logo from "@/components/global/Logo";
 
 import { MdGroups } from "react-icons/md";

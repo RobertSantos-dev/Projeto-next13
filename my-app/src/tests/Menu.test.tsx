@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import Menu from "../components/Home/Menu";
+import Menu from "../components/home/Menu";
 
 describe('<Home/>', () => {
   jest.mock('next/navigation', () => ({

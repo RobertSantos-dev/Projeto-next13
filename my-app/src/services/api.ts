@@ -11,7 +11,7 @@ const api = axios.create({
 });
 
 
-// --- APIs ---
+// --- APIs CHARACTERS e CHARACTERS ID ---
 
 export const listAll = async (setList: ComponentState) => {
   const { data } = await api.get('/character');
@@ -23,4 +23,20 @@ export const listId = async (setId: ComponentState, id: string) => {
   const { data } = await api.get(`/character/${id}`);
 
   setId(data);
+}
+
+
+// --- APIs LOCATIONS ---
+
+export const listAllLocations = async () => {
+  const { data } = await api.get('/location');
+
+  // setList(data.results);
+  return data.results;
+}
+
+export const listIdLocations = async (setId: ComponentState, id: string) => {
+  const { data } = await api.get(`/location/${id}`);
+
+  setId(data.results);
 }

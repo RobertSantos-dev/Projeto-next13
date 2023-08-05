@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, ComponentState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
@@ -8,24 +9,20 @@ import { FaLocationArrow } from "react-icons/fa";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 
 import style from "../../styles/characterId/page.module.css";
-
-type StatesParameters = {
-  setFavorite: ComponentState,
-  setLoading: ComponentState
-};
-
-const btnFavorite = ({ setFavorite, setLoading }: StatesParameters) => {
-  setLoading(true);
-  setFavorite((prevState: boolean) => !prevState);
-
-  setTimeout(() => {
-    setLoading(false);
-  }, 1500);
-}
+import { getFavoritesId } from "@/services/storage";
+import { favoriteTrue, favoriteFalse } from "@/services/favorites";
 
 export default function DetailsOne() {
   const [favorite, setFavorite] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const { id }: any = useParams();
+
+  useEffect(() => {
+    if (getFavoritesId('favorites', Number(id))) {
+      setFavorite(true)
+    }
+  }, []);
 
   return (
     <div>
@@ -37,8 +34,11 @@ export default function DetailsOne() {
           ? <span><AiOutlineLoading3Quarters /></span>
           : (
             <button
-              type="button"
-              onClick={ () => { btnFavorite({ setFavorite, setLoading }) } }
+              onClick={
+                favorite
+                  ? () => favoriteFalse({ setLoading, setFavorite, id })
+                  : () => favoriteTrue({ setLoading, setFavorite, id })
+              }
             >
               { !favorite ? <MdFavoriteBorder /> : <MdFavorite /> }
             </button>

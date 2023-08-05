@@ -6,18 +6,8 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 
 import { listId } from "@/services/api";
+import { TRes } from "@/services/storage";
 import style from "../../styles/characterId/page.module.css";
-
-type TRes = {
-  id: number,
-  name: string,
-  status: string,
-  species: string,
-  origin: { name: string },
-  location: { name: string },
-  episode: string[],
-  image: string
-}
 
 const dmSans = DM_Sans({ subsets: ['latin'], weight: ['700'] });
 const roboto = Roboto({ subsets: ['latin'], weight: ['500'] });
@@ -31,15 +21,20 @@ export default function DetailsTwo() {
   return (
     <div className={ style.div_info }>
       <div className={ style.div_info_one }>
-        <Image
-          src={ res ? res.image : "" }
-          height={ 200 }
-          width={ 200 }
-          alt={ res ? res.name : "" }
-        />
+        {
+          res ? (
+          <Image
+            src={ res.image }
+            height={ 200 }
+            width={ 200 }
+            alt={ res.name }
+          />
+          ) : ""
+        }
         <h3 className={ dmSans.className }>{ res?.name }</h3>
         <span className={ dmSans.className }>{ res?.species }</span>
       </div>
+      <hr className={ style.separator } />
       <div className={ style.div_info_two }>
         <p>
           <span className={ roboto.className }>Status:</span>

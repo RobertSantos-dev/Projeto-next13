@@ -1,0 +1,49 @@
+.li_item {
+  background-color: var(--pallet-six);
+  border-radius: 20px;
+  height: 120px;
+  margin: 0 0 17px 15px;
+  width: 80%;
+}
+
+
+.div_info_location {
+  flex-grow: 1;
+  padding: 10px 0 0 20px;
+}
+
+
+.div_button_copy {
+  align-items: center;
+  justify-content: center;
+  width: 17%;
+}
+.div_button_copy button {
+  background-color: transparent;
+  box-shadow: 0 0 5px black;
+  border: none;
+  border-radius: 10px;
+  color: var(--pallet-tree);
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px;
+  transition: filter 0.3s linear;
+}
+.div_button_copy button:hover {
+  filter: drop-shadow(0 0 5px var(--pallet-tree));
+}
+.div_button_copy button:active {
+  box-shadow: 0 0 5px black, inset 0 0 3px black;
+}
+
+
+/* ---  --- */
+
+.li_item, .div_button_copy {
+  display: flex;
+}
+
+
+.div_info_location, .div_button_copy {
+  height: 100%;
+}

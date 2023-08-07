@@ -1,11 +1,15 @@
+import { IoCopy } from "react-icons/io5";
+
+import style from "../../styles/locations/page.module.css";
+
 type Props = {
   name: string, type: string, dimension: string, residents: string[]
 }
 
 export default function Item(props: Props) {
   return (
-    <li>
-      <div>
+    <li className={ style.li_item }>
+      <div className={ style.div_info_location }>
         <div><h3>{ props.name }</h3></div>
         <div>
           <p>
@@ -25,8 +29,10 @@ export default function Item(props: Props) {
           </p>
         </div>
       </div>
-      <div>
-        <button>COPIAR</button>
+      <div className={ style.div_button_copy }>
+        <button>
+          <IoCopy />
+        </button>
       </div>
     </li>
   );

@@ -7,7 +7,7 @@ import style from "../../styles/global/header.module.css";
 
 const nunito = Nunito({ subsets: ['latin'] });
 
-export default function HeaderGlobal() {
+export default function HeaderGlobal({ title }: { title: string }) {
   return (
     <header className={ style.header_global }>
       <div className={ `${style.div_route} ${nunito.className}` }>
@@ -16,7 +16,7 @@ export default function HeaderGlobal() {
         </Link>
       </div>
       <div className={ style.div_title }>
-        <h1 className={ nunito.className }>Detalhes</h1>
+        <h1 className={ nunito.className }>{ title }</h1>
       </div>
       <div className={ style.div_logo }>
         <span>LOGO</span>

@@ -1,21 +1,28 @@
 .header_global {
   height: 40px;
   justify-content: space-between;
-  width: 97%;
+  margin: 0 auto 25px;
+  padding: 0 20px;
+  width: 100%;
 }
 
 
-.div_route {
-  padding-left: 20px;
-}
 .div_route a {
-  color: var(--pallet-tree);
   font-size: 25px;
 }
 .div_route a:hover {
   filter: drop-shadow(0 0 10px black);
 }
 
+/* .div_title {} */
+.div_title h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.div_logo {
+  justify-content: flex-end;
+}
 .div_logo span {
   color: var(--pallet-for);
   font-weight: bold;
@@ -28,6 +35,11 @@
   display: flex;
 }
 
-.div_route, .div_logo {
+.div_route a, .div_title h1 {
+  color: var(--pallet-tree);
+}
+
+.div_route, .div_logo, .div_title {
   height: 100%;
+  flex-grow: 1;
 }

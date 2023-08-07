@@ -8,9 +8,7 @@
   margin-bottom: 15px;
   text-align: center;
 }
-.header_card h1 {
-  color: var(--pallet-tree);
-}
+/* .header_card h1 {} */
 
 
 .section_card {
@@ -18,7 +16,7 @@
   border-radius: 40px;
   box-shadow: 0 0 8px black;
   height: 490px;
-  width: 440px;
+  max-width: 80%;
 }
 
 
@@ -65,7 +63,7 @@
 }
 .div_info_one h3 {
   color: var(--pallet-five);
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .div_info_two {
@@ -75,7 +73,7 @@
 }
 .div_info_two p {
   color: var(--pallet-for);
-  font-size: 14px;
+  font-size: 16px;
   justify-content: space-between;
   margin-bottom: 4px;
 }

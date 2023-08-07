@@ -15,12 +15,12 @@ export default function HeaderGlobal() {
           <AiOutlineArrowLeft/>
         </Link>
       </div>
-      <div className={ style.div_logo }>
-        <span>
-          LOGO
-        </span>
+      <div className={ style.div_title }>
+        <h1 className={ nunito.className }>Detalhes</h1>
       </div>
-      <div></div>
+      <div className={ style.div_logo }>
+        <span>LOGO</span>
+      </div>
     </header>
   );
 }

@@ -6,7 +6,7 @@ interface Props { params: { id: string } }
 export default function Characters({ params }: Props) {
   return (
     <>
-      <HeaderGlobal title="Detalhes" />
+      <HeaderGlobal title="Detalhes" navigate="/characters" />
       <Card />
     </>
   );

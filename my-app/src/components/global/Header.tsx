@@ -1,17 +1,18 @@
 import Link from "next/link";
 import { Nunito } from "next/font/google";
-
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import style from "../../styles/global/header.module.css";
 
 const nunito = Nunito({ subsets: ['latin'] });
 
-export default function HeaderGlobal({ title }: { title: string }) {
+type Props = { title: string, navigate: string }
+
+export default function HeaderGlobal({ title, navigate }: Props) {
   return (
     <header className={ style.header_global }>
       <div className={ `${style.div_route} ${nunito.className}` }>
-        <Link href="/characters">
+        <Link href={ navigate }>
           <AiOutlineArrowLeft/>
         </Link>
       </div>

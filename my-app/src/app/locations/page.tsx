@@ -8,7 +8,7 @@ export default async function Locations() {
 
   return (
     <>
-      <HeaderGlobal title="Localizações" />
+      <HeaderGlobal title="Localizações" navigate="/" />
       <main>
         <ul>
           { list.map((e: any) => (

@@ -1,15 +1,40 @@
+.main_locations {
+  margin-top: 50px;
+}
+
+
 .li_item {
   background-color: var(--pallet-six);
   border-radius: 20px;
   height: 120px;
   margin: 0 0 17px 15px;
-  width: 80%;
+  width: 75%;
 }
 
 
 .div_info_location {
   flex-grow: 1;
   padding: 10px 0 0 20px;
+}
+
+.div_info_name {
+  margin-bottom: 17px;
+}
+.div_info_name h3 {
+  font-size: 23px;
+}
+
+.div_info_details {
+  flex-wrap: wrap;
+  gap: 5px 50px;
+  margin: 10px 0 0 30px;
+  width: 60%;
+}
+.div_info_details p {
+}
+.span_keys {
+  color: var(--pallet-tree);
+  margin-right: 8px;
 }
 
 
@@ -39,8 +64,19 @@
 
 /* ---  --- */
 
-.li_item, .div_button_copy {
+.li_item,
+.div_button_copy,
+.div_info_details {
   display: flex;
+}
+
+
+.div_info_name h3, .span_values {
+  color: white;
+}
+
+.span_keys, .span_values {
+  font-size: 17px;
 }
 
 

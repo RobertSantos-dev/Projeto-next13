@@ -1,7 +1,11 @@
+import HeaderGlobal from "@/components/global/Header";
+import Informations from "@/components/info/Informations";
+
 export default function Info() {
     return (
       <>
-        <p>/info</p>
+        <HeaderGlobal navigate="/" title="Informações" />
+        <Informations />
       </>
     );
   }

@@ -1,11 +1,15 @@
 import Header from "@/components/characters/Header";
 import Interactions from "@/components/characters/Interacions";
 
-export default function Characters() {
+import { listAll } from "@/services/api";
+
+export default async function Characters() {
+  const listCharacters = await listAll();
+  
   return (
     <>
       <Header />
-      <Interactions />
+      <Interactions list={ listCharacters } />
     </>
   );
 }

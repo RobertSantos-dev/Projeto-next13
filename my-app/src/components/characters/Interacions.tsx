@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { DM_Sans, Roboto } from "next/font/google";
 import Image from "next/image";
 
-import { listAll } from "@/services/api";
 import style from "../../styles/characters/page.module.css";
 
 const dmSantsOne = DM_Sans({ subsets: ["latin"], weight: "500" });
@@ -13,13 +12,10 @@ const dmSantsTwo = DM_Sans({ subsets: ["latin"], weight: "700" });
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
 
-export default function Interactions() {
+export default function Interactions({ list }: { list: Array<object> }) {
   const [search, setSearch] = useState('');
-  const [list, setList] = useState([]);
 
   const { push } = useRouter();
-
-  useEffect(() => { listAll(setList); }, []);
 
   const filterList = list.filter((e: any) => (
     e.name.toLowerCase().includes(search.toLowerCase()))

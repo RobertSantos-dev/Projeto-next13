@@ -13,10 +13,10 @@ const api = axios.create({
 
 // --- APIs CHARACTERS e CHARACTERS ID ---
 
-export const listAll = async (setList: ComponentState) => {
+export const listAll = async () => {
   const { data } = await api.get('/character');
 
-  setList(data.results);
+  return data.results;
 }
 
 export const listId = async (setId: ComponentState, id: string) => {

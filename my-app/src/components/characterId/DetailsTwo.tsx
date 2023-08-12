@@ -1,23 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { DM_Sans, Roboto } from "next/font/google";
-import { useParams } from "next/navigation";
 import Image from "next/image";
 
-import { listId } from "@/services/api";
 import { TRes } from "@/services/storage";
 import style from "../../styles/characterId/page.module.css";
 
 const dmSans = DM_Sans({ subsets: ['latin'], weight: ['700'] });
 const roboto = Roboto({ subsets: ['latin'], weight: ['500'] });
 
-export default function DetailsTwo() {
-  const [res, setRes] = useState<TRes>();
-  const { id }: any = useParams();
-
-  useEffect(() => { listId(setRes, id); }, []);
-
+export default function DetailsTwo({ res }: { res: TRes }) {
   return (
     <div className={ style.div_info }>
       <div className={ style.div_info_one }>

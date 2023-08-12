@@ -1,22 +1,22 @@
 import { ComponentState } from "react";
 
-import { addStorage, removeStorage } from "../services/storage";
+import { addStorage, removeStorage, TFavorite } from "../services/storage";
 
 
 type TParameters = {
   setFavorite: ComponentState,
   setLoading: ComponentState,
-  id: string | number
+  res: TFavorite
 };
 
 
 export const favoriteTrue = (params: TParameters) => {
-  const { setFavorite, setLoading, id } = params;
+  const { setFavorite, setLoading, res } = params;
 
   setLoading(true);
   setFavorite(true);
   
-  addStorage('favorites', Number(id));
+  addStorage('favorites', res);
 
   setTimeout(() => {
     setLoading(false);
@@ -24,12 +24,12 @@ export const favoriteTrue = (params: TParameters) => {
 }
 
 export const favoriteFalse = (params: TParameters) => {
-  const { setFavorite, setLoading, id } = params;
+  const { setFavorite, setLoading, res } = params;
 
   setLoading(true);
   setFavorite(false);
 
-  removeStorage('favorites', Number(id));
+  removeStorage('favorites', res.id);
 
   setTimeout(() => {
     setLoading(false);

@@ -1,7 +1,10 @@
+import HeaderGlobal from "@/components/global/Header";
+
+
 export default function Favorites() {
     return (
       <>
-        <p>/favorites</p>
+        <HeaderGlobal title="Personagens Favoritos" navigate="/" />
       </>
     );
   }

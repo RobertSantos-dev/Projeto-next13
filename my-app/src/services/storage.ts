@@ -1,5 +1,3 @@
-import { ComponentState } from "react";
-
 export type TRes = {
   id: number,
   name: string,
@@ -11,7 +9,15 @@ export type TRes = {
   image: string
 }
 
-export const setStorage = (key: string, value: number | number[]) => {
+
+export type TFavorite = {
+  id: number,
+  name: string,
+  image: string
+};
+
+
+export const setStorage = (key: string, value: TFavorite | TFavorite[]) => {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
@@ -19,7 +25,7 @@ export const getStorage = (key: string) => localStorage.getItem(key);
 
 
 // Adicionar/remover valor nos favoritos
-export const addStorage = (key: string, value: number) => {
+export const addStorage = (key: string, value: TFavorite) => {
   const getValue = getStorage(key);
 
   if (getValue) {
@@ -34,8 +40,8 @@ export const removeStorage = (key: string, value: number) => {
     const getValue = getStorage(key);
 
     if (getValue) {
-      const setNewValue = JSON.parse(getValue).filter((e: number) => e !== value);
-      setStorage(key, setNewValue);
+      const setValue = JSON.parse(getValue).filter((e: TFavorite) => e.id !== value);
+      setStorage(key, setValue);
     }
   }
 
@@ -44,7 +50,7 @@ export const removeStorage = (key: string, value: number) => {
 export const getFavoritesId = (key: string, id: number) => {
   const list = getStorage(key);
   if (list) {
-    const value = JSON.parse(list).find((e: number) => e === id);
+    const value = JSON.parse(list).find((e: TFavorite) => e.id === id);
     return value;
   }
 

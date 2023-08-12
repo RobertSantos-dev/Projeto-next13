@@ -1,20 +1,30 @@
-// import { Nunito } from "next/font/google";
+"use client";
+
+import { listId } from "@/services/api";
+import { TRes } from "@/services/storage";
 
 import DetailsOne from "./DetailsOne";
 import DetailsTwo from "./DetailsTwo";
+
 import style from "../../styles/characterId/page.module.css";
+import { useEffect, useState } from "react";
 
-// const nunito = Nunito({ subsets: ['latin'] });
+export default function Card({ id }: { id: string }) {
+  const [res, setRes] = useState<TRes>();
 
-export default function Card() {
+  useEffect(() => { listId(setRes, id); }, []);
+
   return (
     <main className={ style.main_card }>
-      {/* <header className={ style.header_card }>
-        <h1 className={ nunito.className }>Detalhes</h1>
-      </header> */}
       <section className={ style.section_card }>
-        <DetailsOne />
-        <DetailsTwo />
+        <DetailsOne
+          res={
+            res
+            ? { id: res.id, name: res.name, image: res.image }
+            : { id: 0, name: '', image: '' }
+          }
+        />
+        <DetailsTwo res={ res! } />
       </section>
     </main>
   )

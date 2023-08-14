@@ -2,6 +2,8 @@
 
 import { ComponentState, useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import { MdFavorite } from "react-icons/md";
 import { AiFillInfoCircle } from "react-icons/ai";
 
@@ -40,9 +42,7 @@ export default function List() {
               <button onClick={ () => btnUpdate(e, setList) }>
                 <MdFavorite />
               </button>
-              <button>
-                <AiFillInfoCircle />
-              </button>
+              <Link href={`/characters/${e.id}`}><AiFillInfoCircle /></Link>
             </div>
           </li>
         )) }

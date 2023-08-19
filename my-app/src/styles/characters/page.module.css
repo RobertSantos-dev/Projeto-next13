@@ -12,6 +12,14 @@
   margin: 10px auto;
 }
 
+.logo_characters h1 {
+  transition: all 0.2s ease;
+}
+.logo_characters h1:hover {
+  background-color: rgb(91, 91, 91);
+  box-shadow: 0 0 5px black;
+}
+
 .poster_characters {
   background-image: url('../../../public/background_project_2.png');
   background-repeat: no-repeat;

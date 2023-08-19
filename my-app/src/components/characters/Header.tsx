@@ -1,5 +1,5 @@
 import { Fredoka, Nunito } from "next/font/google";
-import { AiFillInfoCircle } from "react-icons/ai";
+import Link from "next/link";
 
 import style from "../../styles/characters/page.module.css";
 
@@ -11,7 +11,7 @@ export default function Header() {
     <header className={ style.header_characters }>
       <div className={ style.div_characters }>
         <div className={ style.logo_characters }>
-          <h1>LOGO</h1>
+          <h1><Link href="/">LOGO</Link></h1>
         </div>
         <div className={ style.link_characters }>
           {/* <AiFillInfoCircle /> */}

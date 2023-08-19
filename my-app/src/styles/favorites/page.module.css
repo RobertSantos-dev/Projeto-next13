@@ -1,5 +1,6 @@
 .main_favorites {
   margin: auto;
+  padding: 5px;
   width: 95%;
 }
 
@@ -13,9 +14,13 @@
 
 .main_favorites ul li {
   background-color: var(--pallet-six);
-  border-radius: 40px;
+  border-radius: 20px;
   height: 220px;
+  transition: all 0.2s ease;
   width: 200px;
+}
+.main_favorites ul li:hover {
+  box-shadow: 0 0 7px var(--pallet-seven), inset 0 0 3px black;
 }
 
 

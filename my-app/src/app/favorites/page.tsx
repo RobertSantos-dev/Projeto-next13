@@ -4,7 +4,7 @@ import List from "@/components/favorites/List";
 export default function Favorites() {
     return (
       <>
-        <HeaderGlobal title="Personagens Favoritos" navigate="/" />
+        <HeaderGlobal title="Favoritos" navigate="/" />
         <List />
       </>
     );

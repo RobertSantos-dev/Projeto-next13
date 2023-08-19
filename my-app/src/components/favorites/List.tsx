@@ -3,12 +3,16 @@
 import { ComponentState, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { DM_Sans } from "next/font/google";
 
 import { MdFavorite } from "react-icons/md";
 import { AiFillInfoCircle } from "react-icons/ai";
 
 import { getStorage, TFavorite, removeStorage } from "@/services/storage";
+import styles from "../../styles/favorites/page.module.css";
 
+
+const dmSans = DM_Sans({ subsets: ['latin'], weight: ['700'] });
 
 const btnUpdate = (e: TFavorite, setList: ComponentState) => {
   removeStorage('favorites', e.id);
@@ -25,20 +29,20 @@ export default function List() {
   }, []);
 
   return (
-    <main className="">
+    <main className={ styles.main_favorites }>
       <ul>
         { list.map((e: TFavorite) => (
           <li key={ e.id }>
-            <div>
+            <div className={ styles.li_div_character }>
               <Image
                 src={ e.image }
                 alt={ e.name }
                 height={ 100 }
                 width={ 100 }
               />
-              <p>{ e.name }</p>
+              <p className={ dmSans.className }>{ e.name }</p>
             </div>
-            <div>
+            <div className={ styles.li_div_interaction }>
               <button onClick={ () => btnUpdate(e, setList) }>
                 <MdFavorite />
               </button>
